@@ -1,4 +1,4 @@
-# webdev-opgave2-deel1
+# Jobs Web Application
 Single page application made with React
 * npm install
 * npm run start
