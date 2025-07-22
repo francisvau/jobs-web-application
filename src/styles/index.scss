@@ -1,0 +1,52 @@
+// index.scss
+@use 'fonts';
+@use 'navbar';
+@use 'button';
+@use 'field-header';
+@use 'id-selector';
+@use 'details';
+@use 'no-selection';
+@use 'loading';
+@use 'form';
+@use 'home';
+@import 'colors';
+@import 'mixins';
+@import 'screen-widths';
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: $light-color;
+  color: $dark-color;
+  @include default-font-settings
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+.content {
+  margin: auto;
+  margin-bottom: 25rem;
+  width: 60%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+@media(max-width: $medium) {
+  .content {
+    width: 75%;
+  }
+}
+
+@media(max-width: $small) {
+  .content {
+    width: 90%;
+  }
+}

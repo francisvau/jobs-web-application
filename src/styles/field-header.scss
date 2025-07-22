@@ -1,0 +1,18 @@
+@import 'colors';
+
+.field-header {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-top: 7rem;
+    padding: 15px;
+    width: 100%;
+
+    h1 {
+        font-size: 3rem;
+    }
+
+    button {
+        font-size: 25px;
+    }
+}

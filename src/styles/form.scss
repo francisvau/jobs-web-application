@@ -1,0 +1,112 @@
+@import "colors";
+@import 'mixins';
+
+@mixin form-elements {
+    h1, h2, h3 {
+        align-self: center;
+        padding: 2rem;
+        text-decoration: underline;
+    }
+
+    form {
+        display: flex;
+        flex-direction: column;
+
+        .element {
+            margin: 1rem 2rem;
+        }
+
+        .column-element {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .text-input {
+            @include default-font-settings;
+            color: lighten($dark-color, 10);
+            background-color: transparent;
+            border: none;
+            border-bottom: 2px solid $gray-color;
+            margin-left: 0.5rem;
+
+            &:focus {
+                outline: none;
+            }
+        }
+
+        .text-area {
+            @include default-font-settings;
+            color: lighten($dark-color, 10);
+            background-color: transparent;
+            border: none;
+            border-bottom: 2px solid $gray-color;
+            resize: none;
+            height: 35px;
+            margin-top: 0.5rem;
+
+            &:focus {
+                outline: none;
+            }
+        }
+
+        .item-list {
+            margin-left: 2rem;
+
+            button {
+                @include default-font-settings;
+                background-color: transparent;
+                border: none;
+                margin-left: 1rem;
+
+                &:focus {
+                    outline: none;
+                }
+
+                &:hover {
+                    cursor: pointer;
+                    color: red;
+                }
+            }
+        }
+
+        .object-dropdown {
+            @include default-font-settings;
+            color: $dark-color;
+            margin-left: 2rem;
+            background-color: transparent;
+            border: 1px solid lighten($dark-color, 10);
+            border-radius: 5px;
+        }
+    }
+
+    .buttons {
+        margin-bottom: 2rem;
+    }
+
+    .btn-discard {
+        background-color: $red-color;
+        font-size: 1.5rem;
+        margin-top: 2rem;
+        align-self: flex-start;
+    }
+
+    .btn-save {
+        background-color: $green-color;
+        font-size: 1.5rem;
+        margin-top: 2rem;
+        align-self: flex-start;
+    }
+}
+
+.form-edit {
+    @include form-elements;
+}
+
+.form-add {
+    margin-top: 2rem;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+
+    @include form-elements;
+}

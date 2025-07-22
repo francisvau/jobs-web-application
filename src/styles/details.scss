@@ -1,0 +1,49 @@
+
+@import 'colors';
+@import 'screen-widths';
+
+.details {
+    display: flex;
+    flex-direction: column;
+    margin-top: 7%;
+    width: 90%;
+
+    a {
+        text-decoration: none;
+    }
+
+    .icon {
+        &:hover {
+            cursor: pointer;
+        }
+    }
+
+    .element {
+        padding: 2rem 5rem;
+    }
+
+    .details-summary {
+        display: flex;
+        justify-content: space-between;
+        background-color: $brown-color;
+        padding: 1.5rem;
+        border-radius: 10px;
+    }
+
+    ul {
+        padding-left: 2rem;
+    }
+
+    .details-horizontal {
+        display: flex;
+        justify-content: space-between;
+    }
+}
+
+@media(max-width: $small) {
+    .details {
+        .element {
+            padding: 2rem 2rem
+        }
+    }
+}

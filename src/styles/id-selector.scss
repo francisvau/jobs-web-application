@@ -1,0 +1,47 @@
+@import "colors";
+@import "mixins";
+
+.id-selector {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    margin-top: 2rem;
+
+    h2 {
+        font-size: 2rem;
+        padding: 15px;
+    }
+
+    .id-list {
+        display: flex;
+        overflow-x: scroll;
+        width: 100%;
+        border: 5px solid $red-color;
+        background-color: $red-color;
+        border-radius: 15px;
+
+        .empty {
+            padding: 33px;
+        }
+
+        button {
+            padding: 20px;
+            text-decoration: none;
+            color: $light-color;
+            background-color: transparent;
+            border: none;
+            font-size: 20px;
+
+            &:hover {
+                cursor: pointer;
+                color: $dark-color;
+            }
+
+            &:focus {
+                outline: none;
+            }
+        }
+    }
+}

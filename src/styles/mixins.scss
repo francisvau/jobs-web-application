@@ -1,0 +1,12 @@
+
+@mixin non-selectable {
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+@mixin default-font-settings {
+    font-family: "Lexend";
+    font-size: 1.5rem;
+}
